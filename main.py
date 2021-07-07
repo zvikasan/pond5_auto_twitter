@@ -78,8 +78,10 @@ for x in range(1, 12):  # set here how many videos I want to tweet.
 
     time.sleep(3)
 
+
     tweet_button = driver.find_element_by_xpath(
-        '/html/body/div/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div[3]/div/div/div/div[1]/div/div/div/div/div[2]/div[4]/div/div/div[2]/div[4]/div')
+        '/html/body/div/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div[3]/div/div/div/div[1]/div/div/div/div/div[2]/div[3]/div/div/div[2]/div[4]/div')
+
 
     tweet_button.click()
 
