@@ -69,8 +69,11 @@ for x in range(1, 12):  # set here how many videos I want to tweet.
     formatted_video_title = video_title.text.replace(' ', '+')
 
     # final constructed tweet url
+    # constructed_tweet_url = (
+    #     f'https://twitter.com/intent/tweet?url=https://www.pond5.com/item/{video_id}&text={formatted_video_title}+-+Stock+Footage&via=pond5')
+
     constructed_tweet_url = (
-        f'https://twitter.com/intent/tweet?url=https://www.pond5.com/item/{video_id}&text={formatted_video_title}+-+Stock+Footage&via=pond5')
+        f'https://twitter.com/intent/tweet?url=https://www.pond5.com/item/{video_id}?ref=gregbrave&text={formatted_video_title}+-+Stock+Footage&via=pond5')
 
     # print(constructed_tweet_url)
 
@@ -78,10 +81,8 @@ for x in range(1, 12):  # set here how many videos I want to tweet.
 
     time.sleep(3)
 
-
     tweet_button = driver.find_element_by_xpath(
         '/html/body/div/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div[3]/div/div/div/div[1]/div/div/div/div/div[2]/div[3]/div/div/div[2]/div[4]/div')
-
 
     tweet_button.click()
 
