@@ -61,7 +61,7 @@ for x in range(1, 12):  # set here how many videos I want to tweet.
     time.sleep(3)
 
     video_title = driver.find_element_by_xpath(
-        '//*[@id="main"]/div/div[1]/div[4]/div[1]/div/div/div/div[2]/div[2]/div/div[1]/header/h1/span')  # extracts the video title from the video page. Needed for tweet link construction
+        '//*[@id="main"]/div/div[1]/div[4]/div[2]/div/div/div/div[2]/div[2]/div/div[1]/header/h1/span')  # extracts the video title from the video page. Needed for tweet link construction
 
     # print(video_title.text)
 
