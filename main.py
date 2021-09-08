@@ -34,11 +34,14 @@ time.sleep(3)
 # chooses a random page in my portfolio
 
 # random_page = random.randint(1, int(total_pages.text)-1)
+# after recent changes, I am only choosing between set number of pages
+# instead of getting the current number from Pond5
 random_page = random.randint(1, 75)
 
 for x in range(1, 12):  # set here how many videos I want to tweet.
 
     # driver.get(f"https://www.pond5.com/artist/gregbrave#{random_page}/2063")
+    #below is the new link after Pond5 changed their website design and structure
     driver.get(f"https://www.pond5.com/artist/gregbrave?tab=footage&pp=#{random_page}&sb=1")
     driver.refresh()
     time.sleep(3)
