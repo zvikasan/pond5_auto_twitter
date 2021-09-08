@@ -24,20 +24,22 @@ login_button.click()
 
 time.sleep(3)
 
-driver.get("https://www.pond5.com/artist/gregbrave#1/2063")
+# driver.get("https://www.pond5.com/artist/gregbrave?tab=footage")
 # driver.implicitly_wait(10)
 
-time.sleep(3)
+# time.sleep(3)
 
 # Finds the total number of pages in my portfolio
-total_pages = driver.find_element_by_class_name('js-paginationCount')
+# total_pages = driver.find_element_by_class_name('js-paginationCount')
 # chooses a random page in my portfolio
 
-random_page = random.randint(1, int(total_pages.text)-1)
+# random_page = random.randint(1, int(total_pages.text)-1)
+random_page = random.randint(1, 75)
 
 for x in range(1, 12):  # set here how many videos I want to tweet.
 
-    driver.get(f"https://www.pond5.com/artist/gregbrave#{random_page}/2063")
+    # driver.get(f"https://www.pond5.com/artist/gregbrave#{random_page}/2063")
+    driver.get(f"https://www.pond5.com/artist/gregbrave?tab=footage&pp=#{random_page}&sb=1")
     driver.refresh()
     time.sleep(3)
 
